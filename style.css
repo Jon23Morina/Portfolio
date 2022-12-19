@@ -1,0 +1,287 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Chivo Mono', monospace;
+    overflow-y: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background-color: rgb(16, 14, 47);
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+.Title{
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-style: italic;
+    color: rgb(0, 204, 255);
+    position: relative;
+}
+
+.Title::before{
+    content:'..';
+}
+nav{
+    color: rgb(241, 241, 241);
+    cursor: pointer;
+}
+
+nav ul li{
+    font-size: 16px;
+    margin-left: 8px;
+    display: inline;
+    list-style-type: none;
+}
+ul li:hover{
+    border-bottom: 2px solid rgb(9, 180, 223);
+}
+
+#active{
+    color: rgb(0, 204, 255) !important;
+    border-bottom: none;
+}
+
+main{
+     padding: 80px 0px;
+}
+
+main .mainContent{
+    color: rgb(241, 241, 241);
+    padding: 20px;
+    text-align: center;
+}
+
+strong{
+    color: rgb(0, 204, 255);
+}
+
+.mainContent button{
+    padding: 12px 20px;
+    background-color: rgb(0, 204, 255);
+    border-radius: 4px;
+    font-size: 22px;
+    margin: 30px 0;
+    letter-spacing: 1px;
+}
+.mainContent{
+    padding: 500px 0;
+    padding-bottom: 0px;
+    letter-spacing: 2px;
+}
+.mainContent h1, h2{
+    margin: 10px 0;
+}
+.contentBox{
+    width: 50%;
+    margin: 0px auto;
+    padding: 200px 100px;
+    position: relative;
+}
+.contentBox::before {
+    content:'';
+    height: 40px; /* change the size to suit your design */
+    width: 40px; /* change the size to suit your design */
+    display: block;
+    position: absolute;
+    border-top: solid 5px rgb(0, 204, 255);/* change the colour to suit your design */
+    border-left: solid 5px rgb(0, 204, 255);/* change the colour to suit your design */
+    left: 20px; /* change the position to suit your design */
+    top: 20px; /* change the position to suit your design */
+}
+
+.contentBox::after{
+    content:'';
+    height: 40px; /* change the size to suit your design */
+    width: 40px; /* change the size to suit your design */
+    display: block;
+    position: absolute;
+    border-bottom: solid 5px rgb(0, 204, 255); /* change the colour to suit your design */
+    border-right: solid 5px rgb(0, 204, 255); /* change the colour to suit your design */
+    right: 20px; /* change the position to suit your design */
+    bottom: 20px; /* change the position to suit your design */
+}
+
+.name{
+    position: relative;
+    z-index: 1;
+}
+
+
+section{
+    margin-top: 100px;
+}
+
+section img{
+    width: 43px;
+    margin: 5px 12px;
+}
+
+.aboutMe{
+    padding: 70px 200px;
+    background-color:  #111735;
+    padding-bottom: 280px;
+}
+
+.aboutMe h2{
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 30px;
+    font-style: italic;
+    margin-bottom: 85px;
+    position: relative;
+}
+
+.aboutMe h2::after{
+    content: "___________.";
+    height: 2px;
+    width: 20px;
+    margin: 0px auto;
+    position: absolute;
+    bottom: 60px;
+    left: 42%;
+    color: #5a659c;
+}
+
+.aboutMe i{
+    color: rgb(0, 204, 255) !important;
+}
+
+.sideArticle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sideArticle .img{
+    position: relative;
+    z-index: 2;
+    margin-right: 50px;
+}
+
+.sideArticle img{
+    width: 450px;
+    box-shadow: 26px 26px 1px #00ccffb9, 28px 28px 20px #000000b0;
+}
+
+.sideArticle .img::before{
+    content:'';
+    height: 200px; /* change the size to suit your design */
+    width: 100px; /* change the size to suit your design */
+    display: block;
+    position: absolute;
+    border-left: solid 1px rgba(163, 163, 163, 0.746); /* change the colour to suit your design */
+    border-top: solid 1px rgba(163, 163, 163, 0.746); /* change the colour to suit your design */
+    left: -13px; /* change the position to suit your design */
+    top: -13px;
+    z-index: -1;
+}
+
+.sideArticle .paragraph{
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    margin: 10px auto;
+    padding: 25px 30px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    background-color: #061529;
+    border-radius: 10px;
+    color: white;
+    padding-bottom: 5px;
+    box-shadow: 13px 18px 20px rgba(0, 0, 0, 0.609);
+}
+
+.paragraph p, button, blockquote{
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.paragraph p{
+    margin-top: 0px;
+    padding-top: 5px;
+}
+
+.paragraph blockquote{
+    color: #00ccffc9;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.paragraph button{
+    padding: 18px 20px;
+    background-color: rgba(0, 204, 255, 0.899);
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 30px 0;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.skills{
+    background-color: #1b2028;
+    padding: 50px 20px;
+}
+
+.skills div{
+    width: 50%;
+    margin: 0px auto;
+
+}
+
+.skills .row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skills .row div{
+    margin: 40px 60px; 
+    color: white;
+    letter-spacing: 3px;
+}
+
+.skills img{
+    width: 50px;
+}
+
+.skills h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.skills h1{
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 30px;
+    font-style: italic;
+    margin-bottom: 55px;
+    position: relative;
+}
+
+.skills h1::after{
+    content: " ";
+    color: #00ccffe5;
+    height: 2px;
+    width: 290px;
+    margin: 0px auto;
+    position: absolute;
+    bottom: 20px;
+    left: 45%;
+    border-bottom: 3px solid #00ccffe5;
+}

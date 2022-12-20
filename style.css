@@ -71,38 +71,82 @@ strong{
     padding: 500px 0;
     padding-bottom: 0px;
     letter-spacing: 2px;
+    min-height: 1000px;
 }
 .mainContent h1, h2{
     margin: 10px 0;
+    
 }
+
+.mainContent h1{
+    animation: showContent ease-out 2s;
+}
+
+@keyframes showContent {
+    from{
+        font-size: 6px;
+    }
+    to{
+        font-size: 2em;
+    }
+}
+
+.mainContent h2{
+    animation: showContentH2 ease-out 2s;
+}
+
+@keyframes showContentH2 {
+    from{
+        font-size: 6px;
+    }
+    to{
+        font-size: 1.5em;
+    }
+}
+
+
 .contentBox{
     width: 50%;
     margin: 0px auto;
     padding: 200px 100px;
     position: relative;
 }
+
 .contentBox::before {
     content:'';
-    height: 40px; /* change the size to suit your design */
-    width: 40px; /* change the size to suit your design */
+    height: 60px; /* change the size to suit your design */
+    width: 60px; /* change the size to suit your design */
     display: block;
     position: absolute;
-    border-top: solid 5px rgb(0, 204, 255);/* change the colour to suit your design */
-    border-left: solid 5px rgb(0, 204, 255);/* change the colour to suit your design */
+    border-top: solid 5px rgb(0, 204, 255); 
+    border-left: solid 5px rgb(0, 204, 255);
     left: 20px; /* change the position to suit your design */
     top: 20px; /* change the position to suit your design */
+    animation: 1s ease-out contentBoxBefore;
 }
 
 .contentBox::after{
     content:'';
-    height: 40px; /* change the size to suit your design */
-    width: 40px; /* change the size to suit your design */
+    height: 60px; /* change the size to suit your design */
+    width: 60px; /* change the size to suit your design */
     display: block;
     position: absolute;
-    border-bottom: solid 5px rgb(0, 204, 255); /* change the colour to suit your design */
-    border-right: solid 5px rgb(0, 204, 255); /* change the colour to suit your design */
+    border-bottom: solid 5px rgb(0, 204, 255); 
+    border-right: solid 5px rgb(0, 204, 255); 
     right: 20px; /* change the position to suit your design */
     bottom: 20px; /* change the position to suit your design */
+    animation: 1s ease-out contentBoxBefore;
+}
+
+@keyframes contentBoxBefore {
+    from{
+        height: 0px; 
+        width: 0px; 
+    }
+    to{
+        height: 60px; 
+        width: 60px; 
+    }
 }
 
 .name{
@@ -223,10 +267,37 @@ section img{
     cursor: pointer;
     display: block;
     width: 30%;
+    animation-name: makeButtonSmall;
+    animation-duration: 1s;
 }
 
 .paragraph a:hover{
     background-color: rgba(0, 204, 255, 0.899);
+    width: 32%;
+    animation-name: makeButtonBig;
+    animation-duration: 1s;
+}
+
+@keyframes makeButtonBig {
+    from{
+        background-color: #0274fffd;
+        width: 30%;
+    }
+    to{
+        background-color: rgba(0, 204, 255, 0.899);
+        width: 32%;
+    }
+}
+
+@keyframes makeButtonSmall {
+    from{
+        background-color: rgba(0, 204, 255, 0.899);
+        width: 32%;
+    }
+    to{
+        background-color: #0274fffd;
+        width: 30%;
+    }
 }
 
 .skills{
@@ -355,9 +426,82 @@ section img{
     font-size: 17px;
     letter-spacing: 1px;
     color: white;
+    animation-name: makeButtonSmaller;
+    animation-duration: 0.7s;
 }
 
 .projects a:hover{
     background-color: #00ccffe5;
     padding: 15px 20px;
+    animation-name: makeButtonBigger;
+    animation-duration: 1s;
+}
+
+/*Key frames*/
+@keyframes makeButtonBigger {
+    from {
+        background-color: #0274fffd;
+        padding: 15px;
+    }
+    to {
+        background-color: #00ccffe5;
+        padding: 15px 20px;
+    }
+}
+  
+@keyframes makeButtonSmaller {
+    from {
+        background-color: #00ccffe5;
+        padding: 15px 20px;
+    }
+    to {
+        background-color: #0274fffd;
+        padding: 15px;
+    }
+}
+
+footer{
+    min-height: 200px;
+    padding: 10px 5px;
+    padding-bottom: 0px;
+    background-color: #171d25;
+}
+
+footer .info{
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer h2{
+    color: white;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+footer li{
+    list-style: none;
+    margin-bottom: 10px;
+    color: rgb(207, 207, 207);
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(207, 207, 207);
+}
+
+.footerText{
+    font-size: 30px;
+    color: rgb(0, 204, 255);
+}
+
+.copyRight{
+    text-align: center;
+    color: rgb(194, 194, 194);
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 10px;
+    font-weight: 400;
+    margin-top: 50px;
 }

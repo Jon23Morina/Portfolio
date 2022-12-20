@@ -54,6 +54,7 @@ ul li:hover{
 
 main{
      padding: 80px 0px;
+     padding-bottom: 0px;
 }
 
 main .mainContent{
@@ -66,14 +67,6 @@ strong{
     color: rgb(0, 204, 255);
 }
 
-.mainContent button{
-    padding: 12px 20px;
-    background-color: rgb(0, 204, 255);
-    border-radius: 4px;
-    font-size: 22px;
-    margin: 30px 0;
-    letter-spacing: 1px;
-}
 .mainContent{
     padding: 500px 0;
     padding-bottom: 0px;
@@ -116,7 +109,6 @@ strong{
     position: relative;
     z-index: 1;
 }
-
 
 section{
     margin-top: 100px;
@@ -220,14 +212,21 @@ section img{
     margin-bottom: 50px;
 }
 
-.paragraph button{
+.paragraph a{
     padding: 18px 20px;
-    background-color: rgba(0, 204, 255, 0.899);
+    background-color: #0274fffd;
+    color: white;
     border-radius: 10px;
     font-size: 16px;
     margin: 30px 0;
     letter-spacing: 1px;
     cursor: pointer;
+    display: block;
+    width: 30%;
+}
+
+.paragraph a:hover{
+    background-color: rgba(0, 204, 255, 0.899);
 }
 
 .skills{
@@ -284,4 +283,81 @@ section img{
     bottom: 20px;
     left: 45%;
     border-bottom: 3px solid #00ccffe5;
+}
+
+.projects{
+    padding: 40px 25px;
+    background-color: rgb(19, 24, 32);
+}
+
+.rowProject{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.projects h1::before{
+    content: "..";
+    color: rgb(0, 204, 255);
+    font-size: 30px;
+}
+
+.projects h1{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 10px 0px;
+    padding: 50px 0;
+}
+
+.rowProject div{
+    width: 800px;
+    padding-bottom: 14px;
+    border-radius: 7px;
+    object-fit: cover;
+    background-color: #2d2e3f;
+}
+
+.rowProject img{
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.rowProject h3, .rowProject a{
+    padding: 10px 17px;
+}
+
+.projects h3{
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 500;
+}
+
+.textProject{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects a{
+    background-color: #0274fffd;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0px 30px;
+    padding: 15px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.projects a:hover{
+    background-color: #00ccffe5;
+    padding: 15px 20px;
 }

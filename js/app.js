@@ -8,3 +8,4 @@ new Typewriter('#typewriter', {
     autoStart: true,
     loop: true
   });
+  

@@ -98,6 +98,21 @@ strong{
     }
 }
 
+.split{
+	margin: auto;
+	font-family: "Alegreya Sans SC", sans-serif;
+	text-align: center;
+    color: rgb(0, 204, 255);
+	opacity: 0.8;
+}
+.word {
+	display: block !important;
+}
+
+.char {
+	opacity: 0;
+}
+
 .mainContent h2{
     animation: showContentH2 ease-out 2s;
 }

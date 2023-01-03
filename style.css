@@ -547,6 +547,7 @@ footer li a:hover{
         align-items: center;
         width: 70%;
         margin: 0 auto;
+        padding: 20px 0px;
     }
 
     .rowProject div{
@@ -555,9 +556,14 @@ footer li a:hover{
         width: 100%;
     }
 
+    .textProject{
+        margin: 2px !important;
+        padding-bottom: 20px !important;
+    }
+
     .rowProject img{
         object-fit: cover;
-        height: 200px;
+        height: 600px;
     }
     .sideArticle{
         display: block;
@@ -572,10 +578,13 @@ footer li a:hover{
     }
     
     .sideArticle img{
-        width: 400px;
+        width: 600px;
         box-shadow: 26px 26px 1px #00ccffb9, 28px 28px 20px #000000b0;
     }
-    
+
+    .shadowBox{
+        display: none;
+    }
 
     .sideArticle .img::before{
        content: " ";
@@ -607,6 +616,10 @@ footer li a:hover{
         padding: 5px;
     }
     
+    .brResponsive{
+        display: none;
+    }
+
     .paragraph p{
         margin-top: 0px;
         padding-top: 5px;
@@ -666,7 +679,7 @@ footer li a:hover{
     
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .sideArticle .paragraph{
         font-size: 12px;
         line-height: 150%;
@@ -686,5 +699,26 @@ footer li a:hover{
         width: 60%;
         animation-name: makeButtonSmall;
         animation-duration: 1s;
+    }
+
+    .rowProject img{
+        object-fit: cover;
+        height: 400px !important;
+    }
+    .sideArticle{
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .sideArticle .img{
+        position: relative;
+        z-index: 2;
+        margin-bottom: 90px;
+    }
+    
+    .sideArticle img{
+        width: 200px;
+        box-shadow: 26px 26px 1px #00ccffb9, 28px 28px 20px #000000b0;
     }
 }

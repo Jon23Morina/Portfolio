@@ -1,8 +1,13 @@
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     font-family: 'Chivo Mono', monospace;
     overflow-y: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
 }
 
 a{
@@ -12,6 +17,8 @@ a{
 
 body{
     background-color: rgb(16, 14, 47);
+    padding: 0px;
+    margin: 0px;
 }
 header{
     display: flex;
@@ -43,7 +50,7 @@ nav ul li{
     display: inline;
     list-style-type: none;
 }
-ul li:hover{
+nav ul li:hover{
     border-bottom: 2px solid rgb(9, 180, 223);
 }
 
@@ -71,7 +78,7 @@ strong{
     padding: 500px 0;
     padding-bottom: 0px;
     letter-spacing: 2px;
-    min-height: 1000px;
+    min-height: 900px;
 }
 .mainContent h1, h2{
     margin: 10px 0;
@@ -104,7 +111,6 @@ strong{
     }
 }
 
-
 .contentBox{
     width: 50%;
     margin: 0px auto;
@@ -114,38 +120,38 @@ strong{
 
 .contentBox::before {
     content:'';
-    height: 60px; /* change the size to suit your design */
-    width: 60px; /* change the size to suit your design */
+    height: 80px; /* change the size to suit your design */
+    width: 80px; /* change the size to suit your design */
     display: block;
     position: absolute;
     border-top: solid 5px rgb(0, 204, 255); 
     border-left: solid 5px rgb(0, 204, 255);
     left: 20px; /* change the position to suit your design */
     top: 20px; /* change the position to suit your design */
-    animation: 1s ease-out contentBoxBefore;
+    animation: 2s ease-out contentBoxBefore;
 }
 
 .contentBox::after{
     content:'';
-    height: 60px; /* change the size to suit your design */
-    width: 60px; /* change the size to suit your design */
+    height: 80px; /* change the size to suit your design */
+    width: 80px; /* change the size to suit your design */
     display: block;
     position: absolute;
     border-bottom: solid 5px rgb(0, 204, 255); 
     border-right: solid 5px rgb(0, 204, 255); 
     right: 20px; /* change the position to suit your design */
     bottom: 20px; /* change the position to suit your design */
-    animation: 1s ease-out contentBoxBefore;
+    animation: 2s ease-out contentBoxBefore;
 }
 
 @keyframes contentBoxBefore {
     from{
         height: 0px; 
-        width: 0px; 
+        width: 260px; 
     }
     to{
-        height: 60px; 
-        width: 60px; 
+        height: 80px; 
+        width: 80px; 
     }
 }
 
@@ -301,7 +307,7 @@ section img{
 }
 
 .skills{
-    background-color: #1b2028;
+    background-color:  #111735;
     padding: 50px 20px;
 }
 
@@ -325,6 +331,8 @@ section img{
 
 .skills img{
     width: 50px;
+    display: block;
+    margin: 0 auto;
 }
 
 .skills h2{
@@ -358,10 +366,11 @@ section img{
 
 .projects{
     padding: 40px 25px;
-    background-color: rgb(19, 24, 32);
+    background-color: rgb(14, 23, 45);
 }
 
 .rowProject{
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -384,19 +393,22 @@ section img{
 }
 
 .rowProject div{
+    position: relative;
     width: 800px;
     padding-bottom: 14px;
     border-radius: 7px;
     object-fit: cover;
-    background-color: #2d2e3f;
+    background-color: #131319;
 }
 
 .rowProject img{
+    position: relative;
     object-fit: cover;
     width: 100%;
     height: 500px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+    z-index: 2;
 }
 
 .rowProject h3, .rowProject a{
@@ -437,6 +449,24 @@ section img{
     animation-duration: 1s;
 }
 
+.shadowBox{
+    position: absolute !important;
+    width: 100%;
+    height: 490px;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    background-color: rgba(0, 0, 0, 0.645) !important;
+    top: 0px;
+    left: 0px;
+    z-index: 6;
+    cursor: pointer;
+}
+
+.shadowBox:hover{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.182) !important;
+}
+
 /*Key frames*/
 @keyframes makeButtonBigger {
     from {
@@ -464,7 +494,7 @@ footer{
     min-height: 200px;
     padding: 10px 5px;
     padding-bottom: 0px;
-    background-color: #171d25;
+    background-color: #0f1216;
 }
 
 footer .info{
@@ -491,6 +521,10 @@ footer a{
     color: rgb(207, 207, 207);
 }
 
+footer li a:hover{
+    border-bottom: 2px solid rgb(9, 180, 223);
+}
+
 .footerText{
     font-size: 30px;
     color: rgb(0, 204, 255);
@@ -504,4 +538,153 @@ footer a{
     padding: 10px;
     font-weight: 400;
     margin-top: 50px;
+}
+
+@media (max-width: 1700px) {
+    .rowProject{
+        display: block;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .rowProject div{
+        margin: 100px 0px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .rowProject img{
+        object-fit: cover;
+        height: 200px;
+    }
+    .sideArticle{
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .sideArticle .img{
+        position: relative;
+        z-index: 2;
+        margin-bottom: 90px;
+    }
+    
+    .sideArticle img{
+        width: 400px;
+        box-shadow: 26px 26px 1px #00ccffb9, 28px 28px 20px #000000b0;
+    }
+    
+
+    .sideArticle .img::before{
+       content: " ";
+       width: 0;
+       height: 0;
+       position: relative;
+       border-top: 0 ;
+    }
+    
+    
+    .sideArticle .paragraph{
+        text-align: left;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        margin: 10px auto;
+        padding: 25px 30px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        background-color: #061529;
+        border-radius: 10px;
+        color: white;
+        padding-bottom: 5px;
+        box-shadow: 13px 18px 20px rgba(0, 0, 0, 0.609);
+    }
+    
+    .paragraph p, button, blockquote{
+        margin: 10px 0;
+        padding: 5px;
+    }
+    
+    .paragraph p{
+        margin-top: 0px;
+        padding-top: 5px;
+    }
+    
+    .paragraph blockquote{
+        color: #00ccffc9;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .paragraph a{
+        padding: 14px 16px;
+        background-color: #0274fffd;
+        color: white;
+        border-radius: 10px;
+        font-size: 12px;
+        margin: 30px 0;
+        letter-spacing: 1px;
+        cursor: pointer;
+        display: block;
+        width: 60%;
+        animation-name: makeButtonSmall;
+        animation-duration: 1s;
+    }
+    
+    .paragraph a:hover{
+        background-color: rgba(0, 204, 255, 0.899);
+        width: 64%;
+        animation-name: makeButtonBig;
+        animation-duration: 1s;
+    }
+
+    .skills div{
+        width: 100%;
+    }
+
+    .skills .row{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .skills .row div{
+        margin: 60px 0px;
+        text-align: center;
+    }
+
+    .skills img{
+        width: 60px !important;
+    }
+
+    .skills h2{
+         font-size: 16px;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .sideArticle .paragraph{
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: 0px;
+    }
+
+    .paragraph a{
+        padding: 14px 16px;
+        background-color: #0274fffd;
+        color: white;
+        border-radius: 10px;
+        font-size: 12px;
+        margin: 30px 0;
+        letter-spacing: 1px;
+        cursor: pointer;
+        display: block;
+        width: 60%;
+        animation-name: makeButtonSmall;
+        animation-duration: 1s;
+    }
 }
